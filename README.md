@@ -1,2 +1,1 @@
-# iplacex-discografica-api-tamara_lira
-Repositorio para despliegue proyecto eva 2 programación webservices
+API REST Spring para administración de discografías favoritas de empleados de IPLACEX
