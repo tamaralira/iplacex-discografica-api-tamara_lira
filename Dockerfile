@@ -1,9 +1,9 @@
 FROM gradle:8.5-jdk17 AS build
 WORKDIR /app
-COPY . .
+COPY discografia .   # 👈 Copia solo la carpeta del proyecto
 RUN gradle build --no-daemon
 
 FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 COPY --from=build /app/build/libs/*.jar app.jar
-CMD ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
