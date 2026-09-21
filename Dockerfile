@@ -1,6 +1,6 @@
-FROM gradle:8.5-jdk17 AS build
+FROM gradle:8.14-jdk17 AS build
 WORKDIR /app
-COPY discografia/discografia .  
+COPY discografia/discografia . 
 RUN gradle build --no-daemon
 
 FROM eclipse-temurin:17-jdk-alpine
